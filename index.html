@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Form validation practice (Registration Form)</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!--Create form-->
+    <form id="registration-form">
+        <div class="image">
+            <img src="./images/siteLogo.png" alt="">
+        </div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <span class="error-message" id="email-error">Please enter a valid email address.</span>
+        <label for="country">Country:</label>
+        <select id="country" required>
+            <option value="">Select Country</option>
+            <option value="us">Cameroon</option>
+            <option value="ca">Nigeria</option>
+            <option value="uk">Ghana</option>
+            <option value="us">Niger</option>
+            <option value="ca">Mali</option>
+            <option value="uk">Guinea</option>
+            <option value="uk">Burkina Faso</option>
+        </select>
+        <span class="error-message" id="country-error">Please select a country.</span>
+        <label for="zip-code">Zip Code:</label>
+        <input type="text" id="zip-code" required>
+        <span class="error-message" id="zip-code-error">Please enter a valid zip code.</span>
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <span class="error-message" id="password-error">Password must be at least 8 characters long.</span>
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" required>
+        <span class="error-message" id="confirm-password-error">Passwords do not match.</span>
+        <button type="submit">Submit</button>
+    </form>
+    <!--Display success message-->
+    <div id="success-message" class="hidden">
+        <p>High five! Form submitted successfully.</p>
+    </div>
+</body>
+</html>
